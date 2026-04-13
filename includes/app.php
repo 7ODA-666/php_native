@@ -1,6 +1,6 @@
  <?php
 
-$helpers = ['helper','routing','db', 'session', 'mail', 'view'];
+$helpers = ['helper','routing','db', 'session', 'mail','lang' ,'view'];
 
 foreach ($helpers as $helper) {
       require_once __DIR__ ."/helpers/$helper.php";

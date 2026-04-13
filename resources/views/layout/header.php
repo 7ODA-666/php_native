@@ -1,3 +1,3 @@
 <h1>
-    The Header page
+    <?php echo trans('main.home') ?> : <?php echo trans('main.my_name') ?>
 </h1>

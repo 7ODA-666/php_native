@@ -4,7 +4,7 @@
 /**
  * show and set session
  * @param string $key
- * @param mixed $vlaue 
+ * @param mixed $value 
  * @return mixed 
  */
 function session(string $key, mixed $value = null): mixed {
@@ -16,6 +16,17 @@ function session(string $key, mixed $value = null): mixed {
     return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
     
 }
+
+
+/**
+ * show and set session
+ * @param string $key
+ * @return bool 
+ */
+function session_has(string $key): bool {
+    return isset($_SESSION[$key]);    
+}
+
 
 /**
  * delete one session by $key

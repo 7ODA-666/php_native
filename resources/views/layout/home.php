@@ -1,4 +1,11 @@
-<?php view('layout.header') ?>
+<?php view('layout.header');
+
+//  set_local('en');
+
+if(session_has('success'))
+    echo session_delete('success');
+?>
+
 
 <h1>
     The Home Page

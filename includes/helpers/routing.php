@@ -24,6 +24,12 @@ function route_post($segment, $view = null): void {
 }
 
 
+function redirect($path) {
+    header('Location: ' . url($path));
+    exit();
+}
+
+
 function segment() {
     $segment = ltrim( $_SERVER['REQUEST_URI'], '/');
     $segment = ltrim( $segment, config('app.app_name'));
