@@ -13,6 +13,8 @@ function route_get($segment, $view = null): void {
 }
 
 
+
+
 function route_post($segment, $view = null): void {
     global $routes;
 
@@ -44,6 +46,7 @@ function route_init() {
 
     $ROUTES_GET = $routes['GET'] ?? [];
     $ROUTES_POST = $routes['POST'] ?? [];
+
 
     if(isset($_POST) && count($_POST) > 0 && strtolower($_POST['_method']) == 'post') {
         foreach($ROUTES_POST as $rpost) {

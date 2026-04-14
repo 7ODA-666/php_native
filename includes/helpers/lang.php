@@ -31,3 +31,9 @@ function trans(string $key) {
 function set_local(string $lang) {
     session('local', $lang);
 }
+
+
+function get_local() {
+        
+    return session_has('local') ? session('local') : config('lang.default');
+}
