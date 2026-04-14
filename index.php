@@ -12,8 +12,6 @@ require_once __DIR__ . "/includes/exception_error.php";
  
 
   route_init();
-
-
      
  ob_end_flush();
  mysqli_close($connect);

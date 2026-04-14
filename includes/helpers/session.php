@@ -10,10 +10,10 @@
 function session(string $key, mixed $value = null): mixed {
 
     if (!is_null($value)) {
-        $_SESSION[$key] = $value;
+        $_SESSION[$key] = encrypt($value);
     }
 
-    return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
+    return isset($_SESSION[$key]) ? decrypt($_SESSION[$key]) : null;
     
 }
 
