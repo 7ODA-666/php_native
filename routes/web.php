@@ -3,7 +3,7 @@
 
 route_get('/', 'layout.home');
 route_get('lang', 'controllers.LanguageController');
-// route_post('users', 'users');
+// route_get('users', 'users');
 
 // route_get('create');
 // route_post('store');

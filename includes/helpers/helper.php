@@ -26,6 +26,29 @@ if(!function_exists('config')) {
  */
 if(!function_exists('base_path')) {
   function base_path(string $path): string {
+    return getcwd() . "/../$path";
+  }
+}
+
+
+/**
+ * get short path return full public path
+ * @param string $path
+ * @return string 
+ */
+if(!function_exists('public_path')) {
+  function public_path(string $path): string {
     return getcwd() . "/$path";
+  }
+}
+
+
+/**
+ * return name public folder
+ * @return string 
+ */
+if(!function_exists('public_')) {
+  function public_(): string {
+    return 'public';
   }
 }
