@@ -2,7 +2,7 @@
 
 $routes = [];
 
-function route_get($segment, $view = null): void {
+function route_get(mixed $segment, $view = null): void {
     global $routes;
 
     $routes['GET'][] = [
@@ -15,7 +15,7 @@ function route_get($segment, $view = null): void {
 
 
 
-function route_post($segment, $view = null): void {
+function route_post(mixed $segment, $view = null): void {
     global $routes;
 
     $routes['POST'][] = [
@@ -26,7 +26,7 @@ function route_post($segment, $view = null): void {
 }
 
 
-function redirect($path) {
+function redirect(string $path) {
     header('Location: ' . url($path));
     exit();
 }
@@ -63,7 +63,7 @@ function route_init() {
 }
 
 
-function url($segment) {
+function url(mixed $segment) {
     $url = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://';
     $url .= $_SERVER['HTTP_HOST'];
     // if run local host + exist app name

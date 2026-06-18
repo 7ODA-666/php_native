@@ -31,7 +31,7 @@ function session_has(string $key): bool {
 /**
  * delete one session by $key
  * @param string $key
- * @return void 
+ * @return mixed 
  */
 function session_delete(string $key) : mixed {
 
@@ -45,7 +45,7 @@ function session_delete(string $key) : mixed {
 
 /**
  * delete all session (empty session)
- * @return mixed 
+ * @return void 
  */
 function session_delete_all(): void {
     session_destroy();

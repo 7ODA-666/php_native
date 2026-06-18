@@ -1,7 +1,7 @@
 <?php
 
 
-function encrypt($value) : string {
+function encrypt(mixed $value) : string {
     $mode = config('session.encryption_mode');
     $key = config('session.encryption_key');
 
@@ -18,7 +18,7 @@ function encrypt($value) : string {
 }
 
 
-function decrypt($value) : string {
+function decrypt(mixed $value) : string {
     $mode = config('session.encryption_mode');
     $key = config('session.encryption_key');
 
