@@ -43,11 +43,11 @@ if(!function_exists('session_delete')) {
     function session_delete(string $key) : mixed {
 
         if(isset($_SESSION[$key])) {
-            $session = $_SESSION[$key];
+            $session = decrypt($_SESSION[$key]);
             unset($_SESSION[$key]);  
         }
 
-        return $session;
+        return $session ?? null;
     }
 }
 

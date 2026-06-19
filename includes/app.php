@@ -1,7 +1,7 @@
 <?php
 
 ob_start();
-$helpers = ['request','helper', 'AES','routing','db', 'session', 'mail','lang' ,'view'];
+$helpers = ['request','helper', 'AES','routing','db', 'session', 'mail','lang', 'storage' ,'view'];
 
 foreach ($helpers as $helper) {
       require_once __DIR__ ."/helpers/$helper.php";

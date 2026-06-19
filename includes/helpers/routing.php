@@ -84,8 +84,9 @@ if(!function_exists('route_init')) {
         $ROUTES_GET = $routes['GET'] ?? [];
         $ROUTES_POST = $routes['POST'] ?? [];
 
+    
 
-        if(isset($_POST) && count($_POST) > 0 && strtolower($_POST['_method']) == 'post') {
+        if(isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
             foreach($ROUTES_POST as $rpost) {
                 if(segment() == $rpost['segment']) {
                     view($rpost['view']); 

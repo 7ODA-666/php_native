@@ -5,11 +5,7 @@
 ?>
 
 <html lang="<?php echo $lang ?>" dir="<?php echo $dir ?>">
-    <?php view('layout.header', ['title' => trans('main.home')]);
-        //  set_local('en'); 
-        if(session_has('success'))
-        echo session_delete('success');
-    ?>
+    <?php view('layout.header', ['title' => trans('main.home')]);?>
   <body>
     <?php view('layout.navbar') ?>
 
@@ -18,7 +14,28 @@
         <h1 class="text-center">
                 The Home Page
         </h1>
+
+       
+            <?php if(session_has('success')) : ?>
+               <div class="alert alert-success text-center m-4">
+                    <?php echo session_delete('success'); ?>
+                </div>
+            <?php endif; ?>
+          
+        
+
+        <div class="col-md-6 offset-md-3 mt-5">
+            <form action="<?php echo url('upload') ?>" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="file">Choose File</label>
+                  <input type="file" class="form-control" id="file" name="file" required>
+              </div>
+              <button type="submit" class="btn btn-primary mt-2">Upload</button>
+            </form>
+        </div>
+        
     </div>
+    
 
  
     
