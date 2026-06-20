@@ -4,6 +4,7 @@
 route_get('/', 'layout.home');
 route_get('lang', 'controllers.LanguageController');
 route_post('upload', 'controllers.uploadController');
+route_get('delete/file', 'controllers.deleteController');
 // route_get('users', 'users');
 
 // route_get('create');

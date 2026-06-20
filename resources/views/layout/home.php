@@ -12,7 +12,7 @@
 
     <div class="container align-content-center mt-5">
         <h1 class="text-center">
-                The Home Page
+                <?php echo trans('main.home_page') ?>
         </h1>
 
        
@@ -23,7 +23,7 @@
             <?php endif; ?>
           
         
-
+        
         <div class="col-md-6 offset-md-3 mt-5">
             <form action="<?php echo url('upload') ?>" method="post" enctype="multipart/form-data">
               <div class="form-group">
@@ -32,6 +32,11 @@
               </div>
               <button type="submit" class="btn btn-primary mt-2">Upload</button>
             </form>
+        </div>
+
+        <div class="col-md-6 offset-md-3 mt-3">
+            <a class="btn btn-success" href="<?php echo url('storage/users/images/shams.jpeg') ?>">View Uploaded Files</a>
+            <a class="btn btn-danger" href="<?php echo url('delete/file') ?>">Delete Uploaded Files</a>
         </div>
         
     </div>

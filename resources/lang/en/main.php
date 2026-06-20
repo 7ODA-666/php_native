@@ -6,4 +6,5 @@ return [
     'users' => 'Users',
     'login' => 'Loign',
     'register' => 'Register',
+    'home_page' => 'The Home Page',
 ];
