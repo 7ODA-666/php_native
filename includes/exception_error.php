@@ -13,13 +13,13 @@ if(isset($_POST) && count($_POST) > 0 && strtolower($_POST['_method']) == 'post'
     // handle exception error to get request 
     $ROUTES_GET_SEARCH = array_column($ROUTES_GET,'segment');
     if(!in_array(segment(), $ROUTES_GET_SEARCH)) {
-        $segment = ltrim(segment(),'/');
-        if(preg_match('/^storage/i', $segment)) {
-            storage($segment);
-        } else {
-            view('404');
-        }
-
+        // $segment = ltrim(segment(),'/');
+        // if(preg_match('/^storage/i', $segment)) {
+        //     storage($segment);
+        // } else {
+        //     }
+            
+        view('404');
     }
 }
 
