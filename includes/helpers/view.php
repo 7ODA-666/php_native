@@ -20,6 +20,21 @@ if(!function_exists('view')) {
                     $$key = $value;
                 }
             }
+
+            $request_data = null;
+            
+            if(isset($_POST) && count($_POST) > 0) {
+                 $request_data = $_POST;
+            } else if(isset($_GET) && count($_GET) > 0 ) {
+                $request_data = $_GET;
+            }
+
+            if(isset($request_data) && !empty($request_data)) {
+                foreach($request_data as $key => $value) {
+                    set_old($key, $value);
+                }
+            }
+             
             
             include $file;
         } else if(file_exists($file_error)) {

@@ -15,7 +15,7 @@
 
     <div class="container align-content-center mt-5">
         <h1 class="text-danger text-center">
-                The Page is not Fount...
+                <?php echo trans('main.error_404') ?>
         </h1>
         <img src="<?php echo url('assets/images/404.jpg') ?>" alt="404" 
         class="img-fluid d-block mx-auto" style="width: 550px;">

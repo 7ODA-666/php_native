@@ -26,17 +26,35 @@
         
         <div class="col-md-6 offset-md-3 mt-5">
             <form action="<?php echo url('upload') ?>" method="post" enctype="multipart/form-data">
-              <div class="form-group">
-                  <label for="file">Choose File</label>
-                  <input type="file" class="form-control" id="file" name="file" required>
+              <div class="form-group mb-2">
+                  <label for="file"><?php echo trans('main.choose_file') ?></label>
+                  <input type="file" class="form-control" id="file" name="file">
               </div>
-              <button type="submit" class="btn btn-primary mt-2">Upload</button>
+              <div class="form-group mb-2">
+                  <label for="email"><?php echo trans('main.email') ?></label>
+                  <input type="text" class="form-control " id="email" name="email"
+                            value="<?php echo old('email') ?? '' ?>">
+                  <?php echo render_validation_errors('email') ?>
+              </div>
+              <div class="form-group mb-2">
+                  <label for="phone"><?php echo trans('main.phone') ?></label>
+                  <input type="text" class="form-control" id="phone" name="phone"
+                            value="<?php echo old('phone') ?? '' ?>">
+                  <?php echo render_validation_errors('phone') ?>
+              </div>
+              <div class="form-group mb-2">
+                  <label for="address"><?php echo trans('main.address') ?></label>
+                  <input type="text" class="form-control" id="address" name="address"
+                            value="<?php echo old('address') ?? '' ?>">
+                  <?php echo render_validation_errors('address') ?>
+              </div>
+              <button type="submit" class="btn btn-primary mt-2"><?php echo trans('main.save') ?></button>
             </form>
         </div>
 
         <div class="col-md-6 offset-md-3 mt-3">
-            <a class="btn btn-success" href="<?php echo url('storage/users/images/shams.jpeg') ?>">View Uploaded Files</a>
-            <a class="btn btn-danger" href="<?php echo url('delete/file') ?>">Delete Uploaded Files</a>
+            <a class="btn btn-success" href="<?php echo url('storage/users/images/shams.jpeg') ?>"><?php echo trans('main.view_uploaded_file') ?></a>
+            <a class="btn btn-danger" href="<?php echo url('delete/file') ?>"><?php echo trans('main.delete_uploaded_file') ?></a>
         </div>
         
     </div>

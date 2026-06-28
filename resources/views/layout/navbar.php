@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<?php echo url('/') ?>">PHP Native</a>
+  <div class="container container-fluid">
+    <a class="navbar-brand" href="<?php echo url('/') ?>">
+        <img src="<?php echo url('assets/images/P4L-1.png') ?>"
+         alt="Logo" width="50">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

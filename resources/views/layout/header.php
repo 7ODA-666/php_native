@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo isset($title) ? $title : 'Project Name' ?></title>
+    <link rel="icon" type="image/png" href="<?php echo url('assets/images/P4L-1.png') ?>" />
     <?php if($lang == 'ar'): ?>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css">
         <?php else: ?>

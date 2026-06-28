@@ -28,7 +28,7 @@ if(!function_exists('session')) {
  */
 if(!function_exists('session_has')) {
     function session_has(string $key): bool {
-        return isset($_SESSION[$key]);    
+        return (isset($_SESSION[$key]) && !empty($_SESSION[$key]) ? true : false);    
     }
 }
 
@@ -61,3 +61,4 @@ if(!function_exists('session_delete_all')) {
         session_destroy();
     }
 }
+
