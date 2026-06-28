@@ -60,7 +60,7 @@ if(!function_exists('view_engine')) {
         $full_base = base_path("storage/views/$file_name");
 
         if(!file_exists($full_base)) {
-            
+
             $file = file_get_contents($view);
 
             $file = str_replace('{{', '<?php echo ', $file);
@@ -73,11 +73,11 @@ if(!function_exists('view_engine')) {
             $file = str_replace('@endphp', '?>', $file);
 
             // if statement
-            $file = preg_replace('/@if\((.*?)\)+/i', '<?php if($1): ?>', $file);
+            $file = preg_replace('/@if\((.*)\)/i', '<?php if($1): ?>', $file);
             $file = preg_replace('/@endif/i', '<?php endif; ?>', $file);
                 
             // foreach statment
-            $file = preg_replace('/@foreach\((.*?) as (.*?)\)+/i', '<?php foreach($1 as $2): ?>', $file);
+            $file = preg_replace('/@foreach\((.*) as (.*)\)/i', '<?php foreach($1 as $2): ?>', $file);
             $file = preg_replace('/@endforeach/i', '<?php endforeach; ?>', $file);
 
 

@@ -16,22 +16,12 @@
         </h1>
 
        
-            <?php if(session_has('success')) : ?>
-               <div class="alert alert-success text-center m-4">
+            @if(session_has('success'))
+                <div class="alert alert-success text-center m-4">
                     {{ session_delete('success'); }}
                 </div>
-            <?php endif; ?>
-          
-            @php
-                $data = [1, 2, 3, 4, 5];
-            @endphp
-
-            @if(1 == 1)
-                @foreach($data as $num)
-                    {{ $num }} - {{ $num }}
-                @endforeach
             @endif
-        
+          
         
         <div class="col-md-6 offset-md-3 mt-5">
             <form action="{{ url('upload') }}" method="post" enctype="multipart/form-data">
